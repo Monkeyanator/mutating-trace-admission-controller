@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/Monkeyanator/mutating-trace-admission-controller.png)](https://travis-ci.com/Monkeyanator/mutating-trace-admission-controller/ "Travis")
+
 # Mutating trace admission controller
 
 [Mutating admission controller](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#mutatingadmissionwebhook) that injects base64 encoded [OpenCensus span context](https://github.com/census-instrumentation/opencensus-specs/blob/master/trace/Span.md#spancontext) into the `trace.kubernetes.io/context` object annotation.
@@ -20,5 +22,3 @@ The included `Makefile` makes these steps straightforward and the available comm
 * `make docker`: build local Docker image
 * `make cluster-up`: apply certificate configuration and deployment configuration to cluster for the mutating webhook
 * `make cluster-down`: delete resources associated with the mutating webhook from the active cluster
-
-
