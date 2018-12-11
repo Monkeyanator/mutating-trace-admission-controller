@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: trace-context-injector
-          image: staging-k8s.gcr.io/trace-context-injector:latest
+          image: k8s.gcr.io/trace-context-injector:latest
           imagePullPolicy: Always 
           args:
             - -tlsCertFile=/etc/webhook/certs/cert.pem

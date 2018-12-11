@@ -38,7 +38,7 @@ func main() {
 	mux.HandleFunc("/mutate", whsvr.serve)
 	whsvr.server.Handler = mux
 
-	// TODO(Monkeyanator) pass configuration in through here
+	// pass configuration through here
 	ConfigureTracing()
 
 	// begin webhook server
