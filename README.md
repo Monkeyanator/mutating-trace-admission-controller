@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.com/Monkeyanator/mutating-trace-admission-controller.png)](https://travis-ci.com/Monkeyanator/mutating-trace-admission-controller/ "Travis")
+[![Go Report Card](https://goreportcard.com/badge/github.com/Monkeyanator/mutating-trace-admission-controller)](https://goreportcard.com/report/github.com/Monkeyanator/mutating-trace-admission-controller)
 
 # Mutating trace admission controller
 
