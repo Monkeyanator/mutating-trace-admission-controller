@@ -1,4 +1,3 @@
-REGISTRY=staging-k8s.gcr.io
 IMAGE=trace-context-injector
 
 clean:
@@ -7,24 +6,14 @@ clean:
 	docker rmi -f $(IMAGE)
 
 # docker commands
-docker-build:
+docker:
 	@echo 'Building image $(IMAGE)...'
 	docker build -t $(IMAGE) .
-
-docker-release: docker-build docker-publish
-
-docker-publish: docker-tag-latest
-	@echo 'Pushing image $(IMAGE) to $(REGISTRY)...'
-	docker push $(REGISTRY)/$(IMAGE):latest
-
-docker-tag-latest:
-	@echo 'Tagging image $(IMAGE) as latest...' 
-	docker tag $(IMAGE) $(REGISTRY)/$(IMAGE):latest
 
 # cluster commands
 cluster-up: deploy-certs deploy-config
 
-cluster-down: delete-certs delete-config
+cluster-down: delete-config delete-certs
 
 deploy-certs:
 	@echo 'Generating certs and deploying into active cluster...'

@@ -17,8 +17,7 @@ The structure of this mutating admission controller was informed by the [mutatin
 
 The included `Makefile` makes these steps straightforward and the available commands are as follows:
 
-* `make docker-build`: build local Docker image
-* `make docker-release`: build local Docker image, tag with `latest`, and push to specified registry
+* `make docker`: build local Docker image
 * `make cluster-up`: apply certificate configuration and deployment configuration to cluster for the mutating webhook
 * `make cluster-down`: delete resources associated with the mutating webhook from the active cluster
 
