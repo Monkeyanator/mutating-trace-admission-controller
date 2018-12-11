@@ -107,7 +107,7 @@ func mutatePod(ar *v1beta1.AdmissionReview) *v1beta1.AdmissionResponse {
 
 	// determine whether to perform mutation
 	if !mutationRequired(&pod.ObjectMeta) {
-		glog.Errorf("Skipping mutation for %s/%s due to policy check", pod.Namespace, pod.Name)
+		glog.V(3).Infof("Skipping mutation for %s/%s due to policy check", pod.Namespace, pod.Name)
 		return &v1beta1.AdmissionResponse{
 			Allowed: true,
 		}
